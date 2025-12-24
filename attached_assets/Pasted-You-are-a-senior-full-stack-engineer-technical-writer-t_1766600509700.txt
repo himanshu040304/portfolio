@@ -1,0 +1,232 @@
+You are a senior full-stack engineer + technical writer tasked with building a high-end personal portfolio website for a Systems & Networking Engineer.
+This is not a resume website. It must read like an engineering portfolio + technical case study hub suitable for recruiters and deep-tech startups.
+
+1. PROFESSIONAL POSITIONING (NON-NEGOTIABLE)
+
+Title / Identity
+
+Systems & Networking Engineer
+
+Target Audience
+
+Recruiters and deep-tech startups (infra, networking, distributed systems, ML systems)
+
+Core Domains
+
+Distributed Systems
+
+Computer Networks
+
+OS Internals
+
+ML Systems (applied to networking)
+
+This positioning must be explicit on the landing section.
+
+2. TECHNICAL PRIORITY HIERARCHY (VERY IMPORTANT)
+
+Structure the site to clearly reflect depth, not breadth.
+
+Primary Focus (Most Prominent)
+
+C / C++
+
+Networking protocols
+
+OS internals
+
+ns-3 simulations
+
+xv6 kernel work
+
+Distributed systems design
+
+Secondary Focus (Strong but Supporting)
+
+Blockchain infrastructure
+
+Lens Protocol
+
+Aave
+
+Arbitrage bots
+
+DeFi systems engineering
+
+Tertiary Focus (Support Role Only)
+
+Frontend engineering (Next.js, React)
+
+Clearly framed as tooling to support systems, not the core skill
+
+3. PROJECTS SECTION — CASE STUDY STYLE (MANDATORY)
+Source of Projects
+
+I am providing my CV — extract all major projects from it.
+
+I am also providing extensive Arista / Inter-IIT technical reports and design documents.
+
+You must merge and distill these into clear, readable, but technically deep case studies.
+
+REQUIRED FORMAT FOR EACH PROJECT
+
+Each project must have:
+
+1. One-line problem statement
+2. System architecture overview (textual, with diagram placeholders)
+3. My role and ownership
+4. Technical depth section
+5. Outcomes / validation / metrics (if applicable)
+6. Technologies used
+
+Avoid resume bullet points. Write like a technical design document summary.
+
+ARISTA / INTER-IIT PROJECT (FLAGSHIP)
+
+Create a flagship multi-section case study for the Arista / Inter-IIT work, covering:
+
+Client-Centric WiFi RRM problem
+
+Multi-timescale control loops (fast / slow / event)
+
+ns-3 simulation framework
+
+GNN as a digital twin
+
+Safe reinforcement learning (CQL, offline → online)
+
+Causal inference (DiD-based reward validation)
+
+End-to-end architecture
+
+This should be the deepest project on the site, with expandable sections.
+
+Include:
+
+Architecture diagram placeholders
+
+Pipeline flow placeholders
+
+Metrics/graphs placeholders
+
+Links placeholders for reports
+
+4. ENGINEERING PHILOSOPHY SECTION (IMPORTANT)
+
+Add a dedicated section explaining how I think as an engineer, including:
+
+Preference for correctness, observability, and predictable failure modes
+
+Comfort with low-level systems and abstractions
+
+Trade-off driven design (performance vs safety vs scalability)
+
+Why simulation, validation, and safety matter in production systems
+
+Tone: technical, confident, not marketing fluff.
+
+5. SITE STRUCTURE (EXPECTED SECTIONS)
+
+Minimum required sections:
+
+Landing / Hero
+
+About (technical orientation, not personal story)
+
+Engineering Philosophy
+
+Projects (case-study driven)
+
+Skills (structured by domain, not buzzwords)
+
+Publications / Reports / Technical Docs (placeholders allowed)
+
+Resume download
+
+Contact (email + optional form)
+
+6. DESIGN & UX REQUIREMENTS
+
+Theme
+
+Dark
+
+Minimal
+
+Technical / research-oriented aesthetic
+
+Animations
+
+Subtle, purposeful (section transitions, hover reveals)
+
+No flashy gimmicks
+
+UX Principles
+
+Content-first
+
+Readable typography
+
+Clear hierarchy
+
+Responsive across devices
+
+7. TECH STACK REQUIREMENTS
+
+Use a modern, production-grade stack, preferably:
+
+Next.js
+
+React
+
+TypeScript
+
+Tailwind CSS (or equivalent)
+
+Code must be:
+
+Modular
+
+Well-structured
+
+Easy to extend (blog, more projects later)
+
+8. FUNCTIONAL REQUIREMENTS
+
+Fully responsive
+
+SEO-ready
+
+Resume download button
+
+Clean contact section
+
+Analytics-ready (placeholder ok)
+
+Fast load times
+
+9. OUTPUT EXPECTATION
+
+You must:
+
+Generate the entire website code
+
+Explain the project structure
+
+Clearly comment where content is derived from CV vs Arista reports
+
+Leave explicit placeholders where diagrams / PDFs will be linked
+
+This site should feel appropriate for:
+
+Infrastructure startups
+
+Networking companies
+
+Research-oriented engineering teams
+
+Do not simplify the content. Assume a technically literate audience.
+
+FINAL INSTRUCTION
+
+Build this as if it represents a top-1% systems engineer portfolio, not a generic student website.
