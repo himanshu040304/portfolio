@@ -3,6 +3,8 @@ import { Hero } from "@/components/Hero";
 import { Philosophy } from "@/components/Philosophy";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
+import { Achievements } from "@/components/Achievements";
+import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -13,10 +15,8 @@ export default function Home() {
         <Philosophy />
         <Skills />
         <Projects />
-        <section className="py-24 border-t border-white/5 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to engineer reliable systems?</h2>
-            <a href="mailto:himanshu04mar@gmail.com" className="text-accent font-mono text-lg hover:underline">himanshu04mar@gmail.com</a>
-        </section>
+        <Achievements />
+        <Contact />
       </main>
     </div>
   );

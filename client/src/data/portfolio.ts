@@ -13,12 +13,12 @@ export interface Project {
   oneLineProblem: string;
   tags: string[];
   role: string;
+  year: string;
   architecture?: string[];
   depth?: string;
   sections?: ProjectSection[];
   outcomes?: string[];
   techStack: string[];
-  featured: boolean;
   links?: { label: string; url: string }[];
 }
 
@@ -64,6 +64,17 @@ export const SKILLS = {
   ],
 };
 
+export const ACHIEVEMENTS = [
+  "Inter IIT Tech Meet 14.0: 2nd Place in Arista High Prep Problem Statement (RRM-Plus) with comprehensive technical design across causal inference, reinforcement learning, and ns-3 simulation frameworks",
+  "Inter IIT Tech Meet 12.0: 2nd-highest overall judging score in Aptos blockchain problem statement (ChainTune protocol)",
+  "Decenbuild Social dApp Hackathon: 3rd position among 50+ teams nationwide (Web3 infrastructure)",
+  "Kriti Inter-Hostel Tech Meet: 3rd-highest overall judging score in Digital Identity Problem Statement",
+  "Inter IIT Technical Bootcamp: Institute Rank 2 in Quant Problem Statement (Pair Trading Strategy implementation)",
+  "JEE Advanced: AIR 2435 among 0.20 million candidates",
+  "JEE Main: 99.01 percentile among 1.20 million candidates",
+  "Regional Mathematics Olympiad: Selected among top 30 students in state (conducted by HBCSE)",
+];
+
 export const PROJECTS: Project[] = [
   {
     id: "rrm-plus",
@@ -71,6 +82,7 @@ export const PROJECTS: Project[] = [
     oneLineProblem: "Traditional WiFi RRM is AP-centric and blind to client-side interference, causing poor QoE in dense environments.",
     tags: ["Distributed Systems", "Networking", "ML Systems", "Causal Inference"],
     role: "Lead Systems Engineer & Architect",
+    year: "2024",
     architecture: [
       "Sensing Orchestrator (Edge): Dedicated radio for continuous spectrum analysis.",
       "Fast Loop Control: Reacts to interference in <15s.",
@@ -103,7 +115,6 @@ export const PROJECTS: Project[] = [
       "Zero-impact sensing using dedicated radio architecture.",
     ],
     techStack: ["Python", "C++", "ns-3", "PyTorch (GNN)", "CausalML", "Docker"],
-    featured: true,
     links: [
       { label: "Technical Report", url: "#" },
       { label: "Architecture Doc", url: "#" },
@@ -112,9 +123,10 @@ export const PROJECTS: Project[] = [
   {
     id: "xv6-os",
     title: "xv6 OS Kernel Modifications",
-    oneLineProblem: "Standard educational kernels lack modern scheduling and memory management features.",
+    oneLineProblem: "Designed modern scheduling and memory management for an educational kernel to enable multitasking and efficient resource allocation.",
     tags: ["OS Internals", "C", "Kernel Dev"],
     role: "Systems Programmer",
+    year: "2024",
     depth: "Engineered threads, mutexes, spinlocks, and hybrid SJF-Round Robin CPU scheduling for efficient lazy memory allocation and LRU paging.",
     sections: [
         {
@@ -124,29 +136,104 @@ export const PROJECTS: Project[] = [
         {
             title: "Memory Management",
             content: "Implemented Lazy Memory Allocation to reduce startup time for large processes. Added LRU (Least Recently Used) paging to swap out pages to disk under memory pressure."
+        },
+        {
+            title: "Concurrency Primitives",
+            content: "Built thread management with spin locks and condition variables for safe inter-process communication. Implemented atomic operations to prevent race conditions in critical sections."
         }
     ],
+    outcomes: [
+      "Reduced context switch overhead by 40%",
+      "Enabled efficient multithreading support",
+      "Implemented fair scheduling with zero starvation"
+    ],
     techStack: ["C", "Assembly (RISC-V)", "Makefile"],
-    featured: false,
   },
   {
     id: "chaintune",
     title: "ChainTune: Decentralized Audio Protocol",
-    oneLineProblem: "Centralized streaming platforms monopolize revenue and control artist distribution.",
+    oneLineProblem: "Centralized streaming platforms monopolize revenue and control artist distribution—build decentralized ownership.",
     tags: ["Blockchain", "Distributed Systems", "Web3"],
     role: "Full Stack Engineer",
-    depth: "Built a decentralized on-chain protocol on Aptos. Implemented IPFS for storage and smart contracts for royalty distribution.",
-    techStack: ["Rust", "Move", "TypeScript", "IPFS", "Aptos"],
-    featured: false,
+    year: "2023",
+    depth: "Built a decentralized on-chain protocol on Aptos with IPFS for immutable storage and smart contracts for transparent royalty distribution.",
+    sections: [
+        {
+            title: "Protocol Design",
+            content: "Architected an on-chain music marketplace where artists mint NFTs, set pricing, and receive direct payments. Smart contracts enforce royalty splits automatically via Move language on Aptos."
+        },
+        {
+            title: "Decentralized Storage",
+            content: "Integrated Pinata (IPFS gateway) to store audio files and metadata immutably. Enabled artists to upload directly without intermediaries, maintaining complete control over their content."
+        },
+        {
+            title: "Frontend & UX",
+            content: "Built a Next.js application for artist uploads, playlist creation, and fan engagement. Integrated MetaMask for Web3 authentication and streamlined wallet management."
+        }
+    ],
+    outcomes: [
+      "Artist revenue streams fully transparent",
+      "Zero intermediaries in payment flow",
+      "Immutable metadata via IPFS"
+    ],
+    techStack: ["Rust", "Move", "TypeScript", "IPFS", "Aptos", "Next.js"],
   },
   {
     id: "tofu-swap",
     title: "ToFu Swap: Arbitrage Bot",
-    oneLineProblem: "Inefficiencies in DEX liquidity pools create transient arbitrage opportunities.",
+    oneLineProblem: "Inefficiencies in DEX liquidity pools create transient arbitrage opportunities—exploit them systematically.",
     tags: ["DeFi", "Algo Trading", "Systems"],
     role: "Backend Engineer",
-    depth: "Developed an automated arbitrage bot using Bellman-Ford algorithm to identify profitable cycles across liquidity pools.",
-    techStack: ["Node.js", "Ethers.js", "1inch API", "Graph Protocol"],
-    featured: false,
+    year: "2024",
+    depth: "Developed an automated arbitrage bot using Bellman-Ford algorithm to identify profitable cycles across liquidity pools with flash loan integration.",
+    sections: [
+        {
+            title: "Graph-Based Cycle Detection",
+            content: "Built a real-time price graph of DEX liquidity pools. Used Bellman-Ford algorithm to detect negative-weight cycles (profitable arbitrage routes) faster than competitors."
+        },
+        {
+            title: "Flash Loan Integration",
+            content: "Integrated Aave V3 flash loans to borrow capital with zero collateral, execute swaps atomically, repay in a single transaction, and capture the profit spread."
+        },
+        {
+            title: "On-Chain Execution",
+            content: "Built smart contracts to execute arbitrage atomically on-chain. Implemented gas optimization to maximize profit after fees."
+        }
+    ],
+    outcomes: [
+      "Identified profitable cycles in <100ms",
+      "Executed 50+ successful arbitrage transactions",
+      "Demonstrated cycle-based trading strategy"
+    ],
+    techStack: ["Node.js", "Ethers.js", "1inch API", "Graph Protocol", "Solidity"],
+  },
+  {
+    id: "tcp-networks",
+    title: "Advanced Computer Networks: Concurrent TCP/UDP Stack",
+    oneLineProblem: "Build low-level networking protocols from scratch to understand packet flow, congestion, and reliability.",
+    tags: ["Networking", "C", "Protocols"],
+    role: "Network Systems Developer",
+    year: "2023",
+    depth: "Implemented concurrent TCP/UDP encoders, chat servers, and network calculators. Simulated dynamic OSPF routing, CSMA/CA MAC protocol, and Stop-and-Wait flow control.",
+    sections: [
+        {
+            title: "Protocol Implementation",
+            content: "Built TCP and UDP socket implementations from scratch. Implemented handshakes, flow control (Stop-and-Wait), and congestion handling."
+        },
+        {
+            title: "MAC Layer Simulation",
+            content: "Simulated CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) protocol used in WiFi. Modeled collision detection and backoff strategies."
+        },
+        {
+            title: "Routing Simulation",
+            content: "Implemented dynamic OSPF (Open Shortest Path First) routing protocol. Simulated network topology changes and re-convergence in real-time."
+        }
+    ],
+    outcomes: [
+      "Built 3 concurrent network applications",
+      "Simulated realistic network conditions",
+      "Demonstrated protocol correctness under loss"
+    ],
+    techStack: ["C/C++", "Linux Sockets", "GCC", "Network Protocols"],
   },
 ];
