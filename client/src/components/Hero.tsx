@@ -54,7 +54,7 @@ export function Hero() {
             className="flex flex-wrap gap-4"
           >
              <a href="#projects" className="px-6 py-3 bg-white text-black font-mono text-sm font-bold hover:bg-gray-200 transition-colors">
-              VIEW CASE STUDIES
+              VIEW PROJECTS
             </a>
             <div className="flex gap-4 items-center px-6">
               <a href="https://github.com/himanshu040304" target="_blank" className="text-muted-foreground hover:text-white transition-colors"><Github className="w-5 h-5"/></a>
