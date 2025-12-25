@@ -1,15 +1,15 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Terminal, Cpu, Network, BookOpen, FileText } from "lucide-react";
+import { Briefcase, Code, Trophy, FileText } from "lucide-react";
 
 export function Navigation() {
   const [location] = useLocation();
 
   const navItems = [
-    { label: "Home", path: "/", icon: Terminal },
-    { label: "Philosophy", path: "/#philosophy", icon: BookOpen },
-    { label: "Projects", path: "/#projects", icon: Cpu },
-    { label: "Resume", path: "/resume.pdf", icon: FileText, external: true },
+    { label: "Experience", path: "/#experience", icon: Briefcase },
+    { label: "Projects", path: "/#projects", icon: Code },
+    { label: "Achievements", path: "/#achievements", icon: Trophy },
+    { label: "Resume", path: "https://drive.google.com/file/d/15PwjSwFg5_P0q0cYBxeyRbeN2qVwQ-04/view?usp=sharing", icon: FileText, external: true },
   ];
 
   return (
@@ -18,9 +18,9 @@ export function Navigation() {
         <Link href="/">
           <a className="flex items-center gap-2 group cursor-pointer">
             <div className="w-8 h-8 bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-accent/50 transition-colors">
-              <Network className="w-4 h-4 text-accent" />
+              <Code className="w-4 h-4 text-accent" />
             </div>
-            <span className="font-mono font-bold tracking-tight text-sm">HIMANSHU.SYS</span>
+            <span className="font-mono font-bold tracking-tight text-sm">HIMANSHU</span>
           </a>
         </Link>
 

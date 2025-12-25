@@ -7,10 +7,10 @@ export function Skills() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h2 className="text-sm font-mono text-accent uppercase tracking-widest mb-4">02 // Capability</h2>
-            <h3 className="text-3xl font-bold mb-6">Technical Depth</h3>
+            <h2 className="text-sm font-mono text-accent uppercase tracking-widest mb-4">Technical Skills</h2>
+            <h3 className="text-3xl font-bold mb-6">Core Competencies</h3>
             <p className="text-muted-foreground leading-relaxed">
-              My expertise is strictly tiered. I focus on depth in low-level systems and networking, treating frontend frameworks merely as tools for visualization.
+              Specialization in systems, networking, and infrastructure. Understanding across the full stack from kernel to application.
             </p>
           </div>
           

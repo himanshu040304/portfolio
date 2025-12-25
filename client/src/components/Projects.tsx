@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/data/portfolio";
-import { ArrowRight, Zap, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "wouter";
 
 export function Projects() {
   return (
     <section id="projects" className="py-24 border-t border-white/5">
       <div className="container mx-auto px-6">
-        <h2 className="text-sm font-mono text-accent uppercase tracking-widest mb-4">04 // Portfolio</h2>
-        <h3 className="text-4xl md:text-5xl font-bold mb-16">Selected Projects</h3>
+        <h2 className="text-sm font-mono text-accent uppercase tracking-widest mb-4">02 // Work</h2>
+        <h3 className="text-4xl md:text-5xl font-bold mb-16">Projects</h3>
         
         {/* Grid of all projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
