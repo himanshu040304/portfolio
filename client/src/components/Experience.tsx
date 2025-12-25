@@ -3,39 +3,42 @@ import { Briefcase, MapPin, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Inter IIT Tech Meet 14.0",
-    organization: "IIT Delhi",
-    role: "2nd Place - Arista High Prep Problem Statement",
-    period: "2024",
-    description: "Designed RRM-Plus: a client-centric WiFi resource management system using distributed systems, causal inference, and ns-3 simulation.",
+    title: "Software Engineering Intern",
+    organization: "Adobe",
+    role: "Acrobat Performance",
+    period: "May 2025 - Jul 2025",
+    location: "Noida, India",
+    description: "Designed a novel adaptive scheduling solution for Acrobat Reader, currently under consideration for patent filing.",
     highlights: [
-      "Distributed control systems architecture",
-      "Causal inference for validation",
-      "ns-3 digital twin simulation",
+      "Created adaptive background task scheduler optimizing idle-time without affecting responsiveness",
+      "Developed modular scheduling framework using idle prediction, burstiness detection, and activity scoring",
+      "Validated C++ Win32 prototype with 60% reduction in hang time and 50% higher background task throughput",
     ]
   },
   {
-    title: "Systems & Networking Research",
-    organization: "IIT Guwahati",
-    role: "Independent Study",
-    period: "2023-2024",
-    description: "Deep dive into low-level systems: kernel design, network protocols, distributed algorithms, and ML systems.",
+    title: "Core Contributor",
+    organization: "iit.fun",
+    role: "Web3 Platform Development",
+    period: "May 2025 - Oct 2025",
+    location: "Remote",
+    description: "Active contributor to Web3 platform driving adoption across 15+ IITs with 1000+ active students.",
     highlights: [
-      "OS kernel modifications (xv6)",
-      "Network protocol implementation",
-      "Blockchain infrastructure exploration",
+      "Collaborated across 15+ IITs engaging 1000+ students on decentralized platform",
+      "Expanded platform for open-source work via Pharos Network and Citrea",
+      "Actively working on 10+ blockchain infrastructure projects",
     ]
   },
   {
-    title: "Competitive Programming & Problem Solving",
-    organization: "Algorithm Design Track",
-    role: "Team Member",
-    period: "2023-2024",
-    description: "Participated in multiple hackathons and tech meets focusing on systems and infrastructure challenges.",
+    title: "DeFi and Blockchain Head",
+    organization: "Finance and Economics Club, IIT Guwahati",
+    role: "Student Leadership",
+    period: "Apr 2024 - Apr 2025",
+    location: "Guwahati, India",
+    description: "Mentored 100+ students and launched initiatives to accelerate blockchain adoption at IIT Guwahati.",
     highlights: [
-      "DeFi arbitrage bot development",
-      "Blockchain protocol design",
-      "Advanced algorithms and data structures",
+      "Mentored 100+ students on 6+ projects with 10+ major blockchain initiatives",
+      "Partnered with 10+ leading firms including Aptos and The Graph",
+      "Drove impactful initiatives with 1000+ active participants",
     ]
   }
 ];
@@ -46,7 +49,7 @@ export function Experience() {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl">
           <h2 className="text-sm font-mono text-accent uppercase tracking-widest mb-4">01 // Experience</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-16">Technical Journey</h3>
+          <h3 className="text-4xl md:text-5xl font-bold mb-16">Professional & Leadership</h3>
           
           <div className="space-y-12">
             {experiences.map((exp, idx) => (
@@ -69,6 +72,11 @@ export function Experience() {
                       <span className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" /> {exp.period}
                       </span>
+                      {exp.location && (
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" /> {exp.location}
+                        </span>
+                      )}
                       {exp.role && <span>• {exp.role}</span>}
                     </div>
                   </div>

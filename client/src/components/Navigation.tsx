@@ -5,10 +5,18 @@ import { Briefcase, Code, Trophy, FileText } from "lucide-react";
 export function Navigation() {
   const [location] = useLocation();
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const target = href.startsWith("#") ? document.querySelector(href) : null;
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navItems = [
-    { label: "Experience", path: "/#experience", icon: Briefcase },
-    { label: "Projects", path: "/#projects", icon: Code },
-    { label: "Achievements", path: "/#achievements", icon: Trophy },
+    { label: "Experience", path: "/#experience", icon: Briefcase, isAnchor: true },
+    { label: "Projects", path: "/#projects", icon: Code, isAnchor: true },
+    { label: "Achievements", path: "/#achievements", icon: Trophy, isAnchor: true },
     { label: "Resume", path: "https://drive.google.com/file/d/15PwjSwFg5_P0q0cYBxeyRbeN2qVwQ-04/view?usp=sharing", icon: FileText, external: true },
   ];
 
@@ -38,15 +46,15 @@ export function Navigation() {
                 {item.label}
               </a>
             ) : (
-              <Link key={item.path} href={item.path}>
-                <a className={cn(
-                  "flex items-center gap-2 text-sm font-mono transition-colors",
-                  location === item.path ? "text-foreground" : "text-muted-foreground hover:text-accent"
-                )}>
-                  <item.icon className="w-4 h-4" />
-                  {item.label}
-                </a>
-              </Link>
+              <a
+                key={item.path}
+                href={item.path}
+                onClick={(e) => handleSmoothScroll(e, item.path)}
+                className="flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-accent transition-colors cursor-pointer"
+              >
+                <item.icon className="w-4 h-4" />
+                {item.label}
+              </a>
             )
           ))}
         </div>
