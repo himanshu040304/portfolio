@@ -70,4 +70,24 @@
   .mono-label {
     @apply font-mono text-xs uppercase tracking-wider text-muted-foreground;
   }
+
+  .highlight-section {
+    animation: sectionHighlight 1.5s ease-out;
+  }
+}
+
+/* Animations */
+@keyframes sectionHighlight {
+  0% {
+    background-color: hsl(210 100% 50% / 0.15);
+    border-color: hsl(210 100% 50% / 0.6);
+  }
+  50% {
+    background-color: hsl(210 100% 50% / 0.08);
+    border-color: hsl(210 100% 50% / 0.4);
+  }
+  100% {
+    background-color: transparent;
+    border-color: hsl(0 0% 5%);
+  }
 }

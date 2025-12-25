@@ -10,6 +10,14 @@ export function Navigation() {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
+      
+      // Add visual animation to target section
+      setTimeout(() => {
+        target.classList.add("highlight-section");
+        setTimeout(() => {
+          target.classList.remove("highlight-section");
+        }, 1500);
+      }, 300);
     }
   };
 
