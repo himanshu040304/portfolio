@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
     oneLineProblem: "Traditional WiFi RRM is AP-centric and blind to client-side interference, causing poor QoE in dense environments.",
     tags: ["Distributed Systems", "Networking", "ML Systems", "Causal Inference"],
     role: "Lead Systems Engineer & Architect",
-    year: "2024",
+    year: "2025",
     architecture: [
       "Sensing Orchestrator (Edge): Dedicated radio for continuous spectrum analysis.",
       "Fast Loop Control: Reacts to interference in <15s.",
